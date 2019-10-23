@@ -1,0 +1,99 @@
+{
+	"eventId": "ABCD-01",
+	"eventTimestamp": "2019-07-12 09:03:03.274",
+	"eventTimeZone": "UTC",
+	"eventHeader": {
+		"previousEventId": null,
+		"sourceEventId": null,
+		"currentEventId": "566f8ed6-ca68-4718-8c4b-d8ea0761a8a8",
+		"sourcePublisherId": null,
+		"sourceEventTimestamp": null,
+		"publisherId": null,
+		"mode": "MANUAL"
+	},
+	"event": {
+		"info": {
+			"domainId": null,
+			"domainName": null,
+			"sourceSystemId": null,
+			"createdBy": "John"
+		},
+		"ptyRlRelspIdTxt": "r2TIpZxN6I7HQaikSAN4Q4JQryq",
+		"primPtyRlIdTxt": "UydWePUQtlL67qMvCthr6C",
+		"scndryPtyRlIdTxt": "KdL23t5d7ooF6eHgfAS24RnkADQRbno",		
+		"uBERPtyRlRelspID": "DuXKW47kulTmo1wqVnh41Im2l9PHZxTMdYr0",
+		"relspTyp": "001",
+		"primUBERPtyRlId": "ABCD1234-ABPR006",
+		"scndryUBERPtyRlID": "ABCD1234-lukyNMsCefBmLzMIgemHmPet",
+		"strtDt": "2019-03-19 23:15:30",
+		"endDt": "2018-05-07",
+		"primPtyFunTyp": "Beneficiary",
+		"scndryPtyFunTyp": "Beneficiary",
+		"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+		"LD_DT_TM": "2019-10-20 23.24.25.777",
+		"anonymizationOvrrd": {
+			"dataSubjectRequest": {
+				"subjComplexRsnCd": "JThvWIRnciCZZtE0oFda",
+				"subjRqActlDt": "2019-09-29T13:25:35.000Z",
+				"subjRqSLADt": "2019-01-31T11:11:30.000Z",
+				"subjRgtToBeForgottenInd": "T",
+				"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+				"LD_DT_TM": "2019-10-20T23:24:25.678Z"		
+			},
+			"ovrrdRequesterTyp": "EgKxhGv7QYzEbRCMVV4XuND",
+			"ovrrdRequesterID": "ABCD1234-OeySuhnQ1Dw4KoWed",
+			"ovrrdAcnTyp": "jyuAC2AmHMPJkGKE",
+			"ovrrdEntrDt": "2018-12-22T12:19:55.000Z",
+			"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+			"LD_DT_TM": "2019-10-20T23:24:25.678Z",
+			"overrideNoteArray": {
+				"lnNum": "qansiTChakoPM5NMoYDbRGg",
+				"ntTyp": "uFP7x4Q08rHwK",
+				"ntTxt": "QfwsuLmuL5bIciz",
+				"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+				"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+			}
+		},
+		"vsningFlds": {
+			"versionUserCommentArray": [
+			{	
+				"uBERVersioningCommentID": "Array1-XYZ123",
+				"verUsrIdTxt": "Array1-X7HyDGHsYcK0uIgO",
+				"verUsrCmt": "Array1-ArP1zBHKMGS3yURS",
+				"verCmtDt": "2019-01-31T11:11:30.000Z",
+				"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+				"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+			},
+			{
+				"uBERVersioningCommentID": "Array2-XYZ123",			
+				"verUsrIdTxt": "Array2-X7HyDGHsYcK0uIgO",
+				"verUsrCmt": "Array2-ArP1zBHKMGS3yURS",
+				"verCmtDt": "2019-03-31T11:11:30.000Z",
+				"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+				"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+			}],			
+			"versionPartialApprovalGroupArray": {
+				"partialApprovalGroupCommentArray": {
+					"verUsrIdTxt": "BwZJiPTOb8WOIlLPhZBTG",
+					"verUsrCmt": "gsbTn6IgX5cogh73rsOxtmyId1WWm2gNiOWAibCB",
+					"verCmtDt": "2019-09-29T13:25:35.000Z",
+					"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+					"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+				},
+				"verPrtlAprvGrpTyp": "ABCD1234-kGRW3FCA",
+				"verPrtlAprvGrpStatTyp": "ABCD1234-yy3ETLU8cFOX",
+				"verPrtlAprvDt": "2019-01-31T11:11:30.000Z",
+				"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+				"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+			},
+			"verNum": "ABCD1234-999999999",
+			"verStatTyp": "ABCD1234-X16w9Ot",
+			"verCmt": "rgPStdLsxkVVzSUT",
+			"verCrtByUsrIdTxt": "F0mmbYvzOOml7pNGjX4jhEx3cdIeRg7BeSKIbyCHdO",
+			"verCrtDt": "2019-01-31T11:11:30.000Z",
+			"verLstMdfdByUsrIdTxt": "gwPTZ44a32Ibz3D8WiL653g03pEalLKLIqzvFTl5b",
+			"eventId": "PYPI04-566f8ed5-d8ea0761a7a9",
+			"LD_DT_TM": "2019-10-20T23:24:25.678Z"
+		},
+	}
+}

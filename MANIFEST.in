@@ -1,0 +1,4 @@
+include config/*.yml
+recursive-include Resources/SQL/*
+include Resources/*.csv
+include json2oraparserMetadata *.json *.txt, *.csv

@@ -1,0 +1,8 @@
+Connection:
+  DB_ORA_PWD: ETLUSER
+  DB_ORA_USER: ETLUSER
+  SID: NTRPT
+  ip: 169.38.96.99
+  port: '1521'
+SQL:
+  sql_path: C:/Users/SUBHAJITBHAR/Documents/MY_PROGRAM_FILES/Anaconda2/lib/site-packages/json2oraparser/Resources/SQL/
