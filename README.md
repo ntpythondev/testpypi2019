@@ -5,13 +5,13 @@ The ‘json2oraparser’ library parses a JSON file according to the metadata us
   
 PRE-REQUISITES AND ASSUMPTIONS :
 
-•	Python should be installed in system. The recommended Python version for this library is v2.7. For higher version of Python, we will later release a new version of this library.
+> Python should be installed in system. The recommended Python version for this library is v2.7. For higher version of Python, we will later release a new version of this library.
 
-•	Oracle client should be available in the system.
+> Oracle client should be available in the system.
 
-•	Oracle database, tables, columns related to json data needs to be available.
+> Oracle database, tables, columns related to json data needs to be available.
 
-•	Library supports only the following date/timestamp format from Json file :  
+> Library supports only the following date/timestamp format from Json file :  
 Y-m-dTH:M:S.fZ (e.g. 2018-07-29T17:44:27.633Z),  
 Y-m-dTH:M:S.f,  
 Y-m-d H:M:S.f,  
