@@ -9,7 +9,7 @@ The &#39;json2oraparser&#39; library is basically Json-2-Oracle-Parser. It parse
 - Oracle client should be available in the system.
 - Oracle database, tables, columns related to json data needs to be available
 - Library supports only the following date/timestamp format from Json file –  
-    Y-m-dTH:M:S.fZ (e.g. 2018-07-29T17:44:27.633Z), 
+    Y-m-dTH:M:S.fZ (*e.g. 2018-07-29T17:44:27.633Z*), 
     Y-m-dTH:M:S.f,  
     Y-m-d H:M:S.f, 
     Y-m-d H.M.S.f, 
@@ -42,15 +42,15 @@ The entire project operation is a 2 step process –
 
       metadata = json2oraparser.createMetadata (C:/Event_Metadata.csv)
     
-### json2oraparser.createMetadata ():
+### json2oraparser.createMetadata() :
 
-This function will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. *Please note, all the column names in the CSV should match with template file.
+This function will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. *Please note, all the column names in the CSV should match with template file.*
 
 According to the Json file, user needs to create the CSV file which will contain information about different Json entity and attribute names and their corresponding database table and column details where the Json fields will be stored.
 
 A sample Json data file - **Sample\_Json\_File.json** - is given for your reference in &#39;METADATA&#39; folder.
 
-A sample metadata file - **Sample\_Metadata\_with remarks.csv** - has been built (available in &#39;METADATA&#39; folder) as per the Sample Json (with relevant explanation/remarks in &#39;\_Remarks\_&#39; column). *Please note, &#39;\_Remarks\_&#39; column is added for your reference only, it should NOT be part of the metadata CSV file.
+A sample metadata file - **Sample\_Metadata\_with remarks.csv** - has been built (available in &#39;METADATA&#39; folder) as per the Sample Json (with relevant explanation/remarks in &#39;\_Remarks\_&#39; column). *Please note, &#39;\_Remarks\_&#39; column is added for your reference only, it should NOT be part of the metadata CSV file.*
 
 
 ### **Metadata CSV File Description :**
@@ -63,7 +63,7 @@ Metadata CSV file preparation with proper information and correct format is the 
 
 **ATTRIBUTE\_NAME :** Key names from Json file.
 
-**NODE\_LEVEL :** Level of any node in json file. Starting node level is denoted as &#39;1&#39;, subsequent child level will be continued as 2, 3, 4.... In our sample Json, the starting node name is &#39;event&#39;.
+**NODE\_LEVEL :** Level of any node in json file. Starting node level is denoted as &#39;1&#39;, subsequent child level will be continued as 2, 3, 4... In the sample Json, the starting node name is &#39;event&#39;.
 
 **TABLE\_NAME :** Database table name where the entity will be stored. This can be filled up either by table synonyms (e.g. T\_RL\_RE) or by prefixing schema name \&lt;SchemaName\&gt;.\&lt;TableName\&gt; (e.g. MARKET.OVR). Typically one json ENTITY\_NAME corresponds to one database TABLE\_NAME. If you don&#39;t want to load an entire node&#39;s data into its corresponding database table, mark the TABLE\_NAME as &#39;DUMMY&#39; in CSV instead of leaving the field as blank.
 
@@ -89,11 +89,11 @@ Metadata CSV file preparation with proper information and correct format is the 
 
       json2oraparser.loadJson (C:/Event2019.json, metadata, 111.11.11.11, 1111, EVNT, EVNT_USR, EvntPassword@1)
 
-### json2oraparser.loadJson ():
+### json2oraparser.loadJson() :
 
 User needs to provide the following parameters to this function as per the below sequence to load a Json file&#39;s data into Oracle database -
 
-- A Json file (with absolute file path)
+- A valid Json file (with absolute file path)
 - Metadata variable created in STEP 1
 - Oracle database &#39;Hostname&#39;
 - Oracle database &#39;Port&#39;
