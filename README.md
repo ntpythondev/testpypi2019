@@ -3,7 +3,7 @@
 The &#39;json2oraparser&#39; library parses a JSON file according to the metadata user provides and it stores the Json data into Oracle database by taking care of nesting level of the Json.
 
 
-## Pre-Requisites and Assumptions :
+## Pre-Requisite and Assumption :
 
 - Python should be installed in system. The recommended Python version for this library is v2.7. For higher version of Python, we will later release a new version of this library.
 - Oracle client should be available in the system.
@@ -44,7 +44,7 @@ The entire project operation is a 2 step process –
     
 ### json2oraparser.createMetadata ():
 
-This method will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. Please note, All the column names in the CSV should be same as given in template file.
+This function will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. Please note, All the column names in the CSV should be same as given in template file.
 
 According to the Json file, user needs to create the CSV file which will contain information about different Json entity and attribute names and their corresponding database table and column details where the Json fields will be stored.
 
@@ -57,7 +57,7 @@ A sample metadata file - **Sample\_Metadata\_with remarks.csv** - has been built
 
 The CSV file preparation step with proper information with correct format is the backbone of this library&#39;s successful execution. The detailed description of different columns in the metadata CSV file as well as the instruction for filling up each of those columns have been given in the file &#39; **Metadata\_CSV\_Preparation\_Guide.txt**&#39; within &#39;METADATA&#39; folder. The same description is also given below -
 
-**FIELD\_ID :** Unique identifier and serial no. for each row in the csv.
+**FIELD\_ID :** Unique identifier and serial number for each row in the csv.
 
 **ENTITY\_NAME :** Node names (e.g. object/list) from Json file.
 
@@ -71,7 +71,7 @@ The CSV file preparation step with proper information with correct format is the
 
 **PARENT\_NODE :** Immediate parent node of any node in Json file. It is filled up as \&lt;parent ENTITY\_NAME\&gt;|\&lt;starting FIELD\_ID of that parent node\&gt; (e.g. Abs|7).
 
-####**NODE\_PATH :** This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE\_PATH . For remaining levels , there is no need to fill up this column.
+**NODE\_PATH :** This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE\_PATH . For remaining levels , there is no need to fill up this column.
 
 **ROOT\_FLAG :** Starting ROOT\_FLAG of each node will be 1, for other attributes of that node ROOT\_FLAG = 0.
 
@@ -91,7 +91,7 @@ The CSV file preparation step with proper information with correct format is the
 
 ### json2oraparser.loadJson ():
 
-User needs to provide the following parameters as per the below sequence to load a Json file&#39;s data to the oracle database -
+User needs to provide the following parameters to this function as per the below sequence to load a Json file&#39;s data into Oracle database -
 
 - Absolute file path of a Json file
 - Metadata variable created in STEP 1
@@ -103,4 +103,4 @@ User needs to provide the following parameters as per the below sequence to load
 
 
 ## Contact Info :
-For any query/clarification/issues regarding the &#39;json2oraparser&#39; library, please mail to [**ntpythondev@gmail.com**](mailto:ntpythondev@gmail.com) **.**
+For any query/clarification/issue regarding the &#39;json2oraparser&#39; library, please mail to [**ntpythondev@gmail.com**](mailto:ntpythondev@gmail.com) **.**
