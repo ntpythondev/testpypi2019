@@ -10,8 +10,8 @@ The &#39;json2oraparser&#39; library is basically Json-2-Oracle-Parser. It parse
 - Oracle database, tables, columns related to json data needs to be available
 - Library supports only the following date/timestamp format from Json file –  
     Y-m-dTH:M:S.fZ (e.g. 2018-07-29T17:44:27.633Z), 
-    Y-m-dTH:M:S.f, 
-    Y-m-d H:M:S.f,  
+    Y-m-dTH:M:S.f,  
+    Y-m-d H:M:S.f, 
     Y-m-d H.M.S.f, 
     Y-m-d H:M:S, 
     Y-m-d H.M.S, 
