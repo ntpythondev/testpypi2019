@@ -1,6 +1,6 @@
 # json2oraparser
 
-The &#39;json2oraparser&#39; library is basically Json-2-Oracle-Parser. It parses a JSON file according to the metadata file provided by user and stores the Json data into Oracle database by taking care of nesting level of the Json.
+The &#39;json2oraparser&#39; library is basically Json-To-Oracle-Parser. It parses a JSON file according to the metadata file provided by user and stores the Json data into Oracle database by taking care of nesting level of the Json.
 
 
 ## Pre-Requisite and Assumption :
