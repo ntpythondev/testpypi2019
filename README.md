@@ -65,11 +65,11 @@ Metadata CSV file preparation with proper information and correct format is the 
 
 **NODE\_LEVEL :** Level of any node in json file. Starting node level is denoted as &#39;1&#39;, subsequent child level will be continued as 2, 3, 4... In the sample Json, the starting node name is &#39;event&#39;.
 
-**TABLE\_NAME :** Database table name where the entity will be stored. This can be filled up either by table synonyms (e.g. T\_RL\_RE) or by prefixing schema name \&lt;SchemaName\&gt;.\&lt;TableName\&gt; (e.g. MARKET.OVR). Typically one json ENTITY\_NAME corresponds to one database TABLE\_NAME. If you don&#39;t want to load an entire node&#39;s data into its corresponding database table, mark the TABLE\_NAME as &#39;DUMMY&#39; in CSV instead of leaving the field as blank.
+**TABLE\_NAME :** Database table name where the entity will be stored. This can be filled up either by table synonyms (e.g. T\_RL\_RE) or by prefixing schema name [SchemaName].[TableName] (e.g. MARKET.OVR). Typically one json ENTITY\_NAME corresponds to one database TABLE\_NAME. If you don&#39;t want to load an entire node&#39;s data into its corresponding database table, mark the TABLE\_NAME as &#39;DUMMY&#39; in CSV instead of leaving the field as blank.
 
 **COLUMN\_NAME :** Database table name where the attribute value will be stored. This basically represents the granularity of the entire metadata.
 
-**PARENT\_NODE :** Immediate parent node of any node in Json file. It is filled up as \&lt;parent ENTITY\_NAME\&gt;|\&lt;starting FIELD\_ID of that parent node\&gt; (e.g. Abs|7).
+**PARENT\_NODE :** Immediate parent node of any node in Json file. It is filled up as [parent ENTITY\_NAME]|[starting FIELD\_ID of that parent node] (e.g. Abs|7).
 
 **NODE\_PATH :** This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE\_PATH . For remaining levels , there is no need to fill up this column.
 
