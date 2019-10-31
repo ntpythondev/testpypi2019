@@ -1,6 +1,6 @@
 # json2oraparser
 
-The &#39;json2oraparser&#39; library parses a JSON file according to the metadata user provides and it stores the Json data into Oracle database by taking care of nesting level of the Json.
+The &#39;json2oraparser&#39; library is basically Json-2-Oracle-Parser. It parses a JSON file according to the metadata file provided by user and stores the Json data into Oracle database by taking care of nesting level of the Json.
 
 
 ## Pre-Requisite and Assumption :
@@ -11,8 +11,8 @@ The &#39;json2oraparser&#39; library parses a JSON file according to the metadat
 - Library supports only the following date/timestamp format from Json file –  
     Y-m-dTH:M:S.fZ (e.g. 2018-07-29T17:44:27.633Z), 
     Y-m-dTH:M:S.f, 
-    Y-m-d H:M:S.f, 
-    Y-m-d H.M.S.f,  
+    Y-m-d H:M:S.f,  
+    Y-m-d H.M.S.f, 
     Y-m-d H:M:S, 
     Y-m-d H.M.S, 
     Y-m-d 
@@ -32,7 +32,7 @@ The &#39;json2oraparser&#39; library parses a JSON file according to the metadat
     json2oraparser.loadJson (C:/Event2019.json, metadata, 111.11.11.11, 1111, EVNT, EVNT_USR, EvntPassword@1)
 
 
-## Overview:
+## Overview :
 
 The entire project operation is a 2 step process –
 
@@ -44,18 +44,18 @@ The entire project operation is a 2 step process –
     
 ### json2oraparser.createMetadata ():
 
-This function will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. Please note, All the column names in the CSV should be same as given in template file.
+This function will take a csv file (with absolute file path) as input and produces a list of metadata built according to the CSV. This CSV file template ( **&#39;Metadata\_Blank\_Template.csv&#39;** ) is provided in the &#39;METADATA&#39; folder which will be available after library installation. *Please note, all the column names in the CSV should match with template file.
 
 According to the Json file, user needs to create the CSV file which will contain information about different Json entity and attribute names and their corresponding database table and column details where the Json fields will be stored.
 
 A sample Json data file - **Sample\_Json\_File.json** - is given for your reference in &#39;METADATA&#39; folder.
 
-A sample metadata file - **Sample\_Metadata\_with remarks.csv** - has been built (available in &#39;METADATA&#39; folder) as per the Sample Json (with relevant explanation/remarks in &#39;\_Remarks\_&#39; column). Please note, &#39;\_Remarks\_&#39; column is additional and is given for your reference only, it should NOT be part of the metadata CSV file.
+A sample metadata file - **Sample\_Metadata\_with remarks.csv** - has been built (available in &#39;METADATA&#39; folder) as per the Sample Json (with relevant explanation/remarks in &#39;\_Remarks\_&#39; column). *Please note, &#39;\_Remarks\_&#39; column is added for your reference only, it should NOT be part of the metadata CSV file.
 
 
 ### **Metadata CSV File Description :**
 
-The CSV file preparation step with proper information with correct format is the backbone of this library&#39;s successful execution. The detailed description of different columns in the metadata CSV file as well as the instruction for filling up each of those columns have been given in the file &#39; **Metadata\_CSV\_Preparation\_Guide.txt**&#39; within &#39;METADATA&#39; folder. The same description is also given below -
+Metadata CSV file preparation with proper information and correct format is the backbone of this library&#39;s successful execution. The detailed description of different columns in the metadata CSV file as well as the instruction for filling up each of those columns have been given in the file &#39; **Metadata\_CSV\_Preparation\_Guide.txt**&#39; within &#39;METADATA&#39; folder. The same description is also given below -
 
 **FIELD\_ID :** Unique identifier and serial number for each row in the csv.
 
@@ -93,7 +93,7 @@ The CSV file preparation step with proper information with correct format is the
 
 User needs to provide the following parameters to this function as per the below sequence to load a Json file&#39;s data into Oracle database -
 
-- Absolute file path of a Json file
+- A Json file (with absolute file path)
 - Metadata variable created in STEP 1
 - Oracle database &#39;Hostname&#39;
 - Oracle database &#39;Port&#39;
