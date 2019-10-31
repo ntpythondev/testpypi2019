@@ -71,7 +71,7 @@ Metadata CSV file preparation with proper information and correct format is the 
 
 **PARENT\_NODE :** Immediate parent node of any node in Json file. It is filled up as [parent ENTITY\_NAME]|[starting FIELD\_ID of that parent node] (e.g. Abs|7).
 
-**NODE\_PATH :** This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE\_PATH . For remaining levels , there is no need to fill up this column.
+**NODE\_PATH :** This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE\_PATH . *For remaining levels , there is no need to fill up this column.*
 
 **ROOT\_FLAG :** Starting ROOT\_FLAG of each node will be 1, for other attributes of that node ROOT\_FLAG = 0.
 
