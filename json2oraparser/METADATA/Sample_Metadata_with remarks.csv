@@ -1,0 +1,31 @@
+FIELD_ID,ENTITY_NAME,ATTRIBUTE_NAME,NODE_LEVEL,TABLE_NAME,COLUMN_NAME,PARENT_NODE,NODE_PATH,ROOT_FLAG,CURRENT_IND,LOGICAL_DATATYPE,PARENT_COLUMN,,_Remarks_
+1,event,RelID,1,T_RL_RE,RE_ID,none,event,1,Y,VARCHAR2,,,"NODE_PATH and ENTITY_NAME is 'event', as this is the starting (Level 1) node name as per Json where we want to start data processing from."
+2,event,relTyp,1,T_RL_RE,RE_TP,none,event,0,Y,VARCHAR2,,,"Starting ROOT_FLAG of each node will be 1, for other fields of that node ROOT_FLAG = 0"
+3,event,strtTimestamp,1,T_RL_RE,SA_TS,none,event,0,Y,TIMESTAMP,,,We used table synonyms to fill up TABLE_NAME field
+4,event,endTimestamp,1,T_RL_RE,ED_TS,none,event,0,Y,TIMESTAMP,,,
+5,event,primRlId,1,T_RL_RE,PR_RL_ID,none,event,0,Y,VARCHAR2,,,
+6,event,scndryRlID,1,T_RL_RE,SC_RL_ID,none,event,0,Y,VARCHAR2,,,
+7,Abs,OvrAllID,2,MARKET.OVR,OVR_ALL_ID,event|1,,1,Y,VARCHAR2,primRlId,,"OvrAllID' field doesn't exist in Json, but OVR_ALL_ID is primary key of this table which we want to populate with some attribute from its parent node. Please note, the entry in PARENT_COLUMN field must exist in Json and should belong to immidiate parent node."
+8,Abs,ovrRqTyp,2,MARKET.OVR,OVR_RQ_TP,event|1,,0,Y,VARCHAR2,,,PARENT_NODE is 'event|1' as 'event' is parent node of 'Abs' and '1' is the starting FIELD_ID of 'event' node
+9,Abs,ovrRqID,2,MARKET.OVR,OVR_RQ_ID,event|1,,0,Y,VARCHAR2,,,We used <SchemaName>.<TableName> to fill up TABLE_NAME field
+10,Abs,ovrRqAmt,2,MARKET.OVR,OVR_RQ_AMT,event|1,,0,Y,NUMBER,,,
+11,Abs,ovrRqDt,2,MARKET.OVR,OVR_RQ_DT,event|1,,0,Y,DATE,,,
+12,Smg,vrsNum,2,T_VRS,VS_NB,event|1,,0,Y,VARCHAR2,,,
+13,Smg,vrsTyp,2,T_VRS,VS_TP,event|1,,0,N,VARCHAR2,,,"Though 'vrsTyp' field comes from Json, but we don't want to load this attribute's data in database. That's why we marked CUR_IND = 'N'. Please note, to load any attribute's data in database CUR_IND must be marked as 'Y'. Else the data won't be loaded in DB."
+14,Smg,vrsAmt,2,T_VRS,VS_AMT,event|1,,0,Y,NUMBER,,,
+15,Smg,vrsFlag,2,T_VRS,VS_FLG,event|1,,0,Y,CHAR,,,
+16,Smg,vrsDt,2,T_VRS,VS_DT,event|1,,0,Y,DATE,,,
+17,sg51,UsrCmt,3,T_CMT,USR_CM,Smg|12,,1,Y,VARCHAR2,,,
+18,sg51,CmtID,3,T_CMT,CM_ID,Smg|12,,0,Y,VARCHAR2,,,
+19,sg51,CmtDt,3,T_CMT,CM_DT,Smg|12,,0,Y,DATE,,,
+20,sg52,PrtlTyp,3,T_PRTL,PRTL_TP,Smg|12,,1,Y,VARCHAR2,,,
+21,sg52,PrtlDt,3,T_PRTL,PRTL_DT,Smg|12,,0,Y,DATE,,,
+22,as902,NtID,3,MARKET.NT,NT_ID,Abs|7,,1,Y,VARCHAR2,ovrRqID,,
+23,as902,ntTxt,3,MARKET.NT,NT_TX,Abs|7,,0,Y,VARCHAR2,,,
+24,as902,ntTyp,3,MARKET.NT,NT_TP,Abs|7,,0,Y,VARCHAR2,,,
+25,as901,RsnCd,3,DUMMY,RS_CD,Abs|7,,1,Y,VARCHAR2,,,"Though 'as901' node comes from Json, but we don't want to load this node's data in database. That's why we marked TABLE_NAME = 'DUMMY' for the entire node. Please note, if you don't want to load an entire node's data, mark the TABLE_NAME as 'DUMMY'. Please don't leave the field blank."
+26,as901,ActlDt,3,DUMMY,ACTL_DT,Abs|7,,0,Y,DATE,,,
+27,as901,RgtFlag,3,DUMMY,RGT_FLG,Abs|7,,0,Y,CHAR,,,
+28,sg521,PrtlCmtID,3,T_PRTL_CM,PRT_CM_ID,sg52|20,,1,Y,VARCHAR2,PrtlTyp,,
+29,sg521,PrtlUsrCmt,4,T_PRTL_CM,PRT_USR_CM,sg52|20,,0,Y,VARCHAR2,,,
+30,sg521,PrtlUsrCmtDt,4,T_PRTL_CM,PRT_CM_DT,sg52|20,,0,Y,DATE,,,
