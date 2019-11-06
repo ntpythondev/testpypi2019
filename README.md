@@ -1,8 +1,8 @@
 # json2oraparser
 
-The &#39;json2oraparser&#39; library parses a JSON file according to the metadata file provided by user and stores the Json data into Oracle database by taking care of nesting level (upto n-th level) of the Json.
+The &#39;json2oraparser&#39; library parses a JSON file (nested upto n-th level) according to the metadata file provided by user and stores the Json data into Oracle database.
 
-Program reads the user given metadata for one time and looks it up while level wise parsing the Json file to build the exact path of each Json key at runtime and then extracts all the required database related information like exact table name, column name, dataype by referencing the metadata to generate all insert sql statements which then gets executed in database to finally load Json data into Oracle database.
+Program reads the user given metadata for one time and looks it up while parsing the Json file level wise (it can well parse a complex Json file nested upto n-th level) to build the exact path of each Json key at runtime and then extracts all the required database related information like exact table name, column name, dataype by referencing the metadata to generate all insert sql statements which then gets executed in database to finally load Json data into Oracle database.
 
 
 ## Pre-Requisite and Assumption :
