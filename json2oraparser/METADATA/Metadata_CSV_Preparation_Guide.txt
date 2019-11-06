@@ -1,0 +1,38 @@
+Following are the description of different columns in the metadata CSV file which user needs to fill up. All the columns are mandatory to fill up -
+
+FIELD_ID:
+Unique identifier and serial no. for each row in the csv.
+
+ENTITY_NAME:
+Node name (e.g. object/list) from Json file.
+
+ATTRIBUTE_NAME:
+Key names from Json file.
+
+NODE_LEVEL:
+Level of any node in json file. Starting node level is denoted as '1', subsequent child level will be continued as 2, 3, 4.... In our sample Json, the starting node name is 'event'.
+
+TABLE_NAME:
+Database table name where the entity will be stored. This can be filled up either by table synonyms (e.g. T_RL_RE) or by prefixing schema name <SchemaName>.<TableName> (e.g. MARKET.OVR). Typically one json ENTITY_NAME corresponds to one database TABLE_NAME. 
+if you don't want to load an entire node's data into its's corresponding database table, mark the TABLE_NAME as 'DUMMY' in CSV instead of leaving the field as blank.
+
+COLUMN_NAME:
+Database table name where the attribute value will be stored. This basically represents the granularity of the entire metadata.
+
+PARENT_NODE:
+Immediate parent node of any node in Json file. It is filled up as <parent ENTITY_NAME>|<starting FIELD_ID of that parent node> (e.g. Abs|7).
+
+NODE_PATH:
+This field needs to be used for all node level of the json. For Level 1 , starting node name from the json of this level should be given as NODE_PATH . For remaining levels , there is no need to fill up this column.
+
+ROOT_FLAG:
+Starting ROOT_FLAG of each node will be 1, for other attributes of that node ROOT_FLAG = 0.
+
+CURRENT_IND:
+This field must be filled up as 'Y' for loading any column in database. In case, you don't want to load any particular column of a table (even though it's corresponding attribute is present in Json), fill it up as 'N'.
+
+LOGICAL_DATATYPE:
+Datatype of the database column where you want to store json attribute value.
+
+PARENT_COLUMN:
+If you want to load a particular column of a node with the value of any attribute of immediate parent node then PARENT_COLUMN field needs to be used. Please note, the entry in PARENT_COLUMN field in CSV must exist in Json and should belong to immediate parent node of the current entity.
