@@ -1,0 +1,69 @@
+{
+	"eventId": "XYZ-PY-01",
+	"eventTimestamp": "2019-07-12 09:03:03.274",
+	"eventTimeZone": "UTC",
+	"header": {
+		"previousEventId": "566f8ed6",
+		"sourceEventId": null,
+		"currentEventId": "XYZ-PY-01",
+		"sourcePublisherId": null,
+		"sourceEventTimestamp": null,
+		"publisherId": null,
+		"mode": "MANUAL"
+	},
+	"event": {
+		"Info": {
+			"domainId": null,
+			"domainName": null,
+			"sourceSystemId": "Day",
+			"createdBy": "John"
+		},
+		"RelID": "DuXKW47kulTmo1wqVnh41Im2l9PHZxTMdYr0",
+		"relTyp": "001",
+		"primRlId": "ABCD1234-ABPR006",
+		"scndryRlID": "ABCD1234-lukyNMsCefBmLzMIgemHmPet",
+		"strtTimestamp": "2018-03-19 23:15:30",
+		"endTimestamp": "2018-05-07 15.45.13.234",
+		"Abs": {
+			"as901": {
+				"RsnCd": "JThvWIRnciCZZtE0oFda",
+				"ActlDt": "2018-09-29T13:25:35.453Z",
+				"RgtFlag": "T"
+			},
+			"ovrRqTyp": "EgKxhGv7QYzEbRCMVV4XuND",
+			"ovrRqID": "ABCD1234-OeySuhnQ1Dw4KoWed",
+			"ovrRqAmt": 555,
+			"ovrRqDt": "2018-12-22T12:19:55.765",
+			"as902": {
+				"ntTyp": "uFP7x4Q08rHwK",			
+				"ntTxt": "QfwsuLmuL5bIciz"
+			}
+		},
+		"Smg": {
+			"sg51": [
+			{	
+				"CmtID": "A1-XYZ123",
+				"UsrCmt": "ArP1zBH",
+				"CmtDt": "2018-01-31 11:11:30.343"
+			},
+			{
+				"CmtID": "A2-XYZ123",			
+				"UsrCmt": "KMGS3yURS",
+				"CmtDt": "2018-03-31 21.21.30.242"
+			}],			
+			"sg52": {
+				"sg521": {
+					"PrtlUsrCmt": "gsbTn6IgX5cogh73rsOxtmyId1WWm2gNiOWAibCB",
+					"PrtlUsrCmtDt": "2018-09-29 13:25:35",
+				},
+				"PrtlTyp": "ABCD1234-kGRW3FCA",
+				"PrtlDt": "2018-01-31 19.22.30",
+			},
+			"vrsNum": "ABCD1234-999999999",
+			"vrsTyp": "ABCD1234-X16w9Ot",
+			"vrsAmt": null
+			"vrsFlag": "Y",
+			"vrsDt": "2018-01-31",
+		}
+	}
+}
